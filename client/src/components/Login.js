@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await login(formData);
+      await login(formData);
       //setToken(res.data.token);
       setMessage("Login successful");
     } catch {
