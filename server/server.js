@@ -17,7 +17,7 @@ server.use("/api/auth", authRoute);
 server.use('/api/contact', contact);
 
 
-mongoose.connect("mongodb://localhost:27017/authdb")
+mongoose.connect(process.env.MOGOR_URL)
   .then(() => {
     console.log("MongoDB connected");
     server.listen(8000, () => {
