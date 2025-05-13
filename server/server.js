@@ -13,6 +13,10 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
+server.get("/",(req,res)=>{
+res.status(200).send("Welcome Food Zone")
+})
+
 server.use("/api/auth", authRoute);
 server.use('/api/contact', contact);
 
